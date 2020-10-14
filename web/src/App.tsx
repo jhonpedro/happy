@@ -1,8 +1,19 @@
 import React from 'react'
-import './App.css'
+import { BrowserRouter } from 'react-router-dom'
+
+import Routes from './routes'
+
+import GlobalStyle from './assets/styles/global'
 
 function App() {
-	return <div className="App">Hello world!</div>
+	return (
+		<React.Fragment>
+			<GlobalStyle />
+			<BrowserRouter>
+				<Routes />
+			</BrowserRouter>
+		</React.Fragment>
+	)
 }
 
 export default App
