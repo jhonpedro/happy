@@ -19,7 +19,7 @@ function LandingPage() {
 	const history = useHistory()
 
 	function handleNext() {
-		history.push('/orphanages-map')
+		history.push('/orphanages')
 	}
 
 	return (

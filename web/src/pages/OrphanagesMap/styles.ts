@@ -9,6 +9,44 @@ export const OrphanagesContainer = styled.div`
 
 	display: flex;
 	justify-content: space-between;
+
+	.leaflet-container {
+		z-index: 1;
+	}
+
+	.map-popup .leaflet-popup-content-wrapper {
+		background: rgba(255, 255, 255, 0.7);
+		border-radius: 2rem;
+		box-shadow: none;
+	}
+
+	.map-popup .leaflet-popup-content {
+		color: ${colors.blue};
+		font-size: 2rem;
+		font-weight: 800;
+		margin: 0.9rem 1.2rem;
+
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.map-popup .leaflet-popup-content a {
+		width: 4rem;
+		height: 4rem;
+
+		background: ${colors.lighterBlue};
+		box-shadow: 1.7rem 2.5rem 4.2rem rgba(23, 142, 166, 0.16);
+		border-radius: 1.2rem;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.map-popup .leaflet-popup-tip-container {
+		display: none;
+	}
 `
 
 export const OrphanagesAside = styled.aside`
@@ -32,7 +70,7 @@ export const AsideHeader = styled.header`
 
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: space-evenly;
 
 	img {
 		height: 20%;
@@ -42,11 +80,11 @@ export const AsideHeader = styled.header`
 
 	strong {
 		font-weight: 800;
-		font-size: 2rem;
+		font-size: 3rem;
 	}
 
 	p {
-		font-size: 1.2rem;
+		font-size: 1.7rem;
 	}
 `
 
@@ -74,7 +112,7 @@ export const Button = styled.button`
 	background: ${colors.lightBlue};
 	border-radius: 1.5rem;
 	transition: 0.4s ease;
-	z-index: 2;
+	z-index: 10;
 
 	display: flex;
 	justify-content: center;

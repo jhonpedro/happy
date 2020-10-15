@@ -2,7 +2,9 @@ import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 
 import Landing from '../pages/Landing'
-import Orphanages from '../pages/Orphanages'
+import OrphanagesMap from '../pages/OrphanagesMap'
+import Orphanage from '../pages/Orphanage'
+import CreateOrphanages from '../pages/CreateOrphanages'
 
 function Routes() {
 	return (
@@ -10,8 +12,14 @@ function Routes() {
 			<Route path="/" exact>
 				<Landing />
 			</Route>
-			<Route path="/orphanages-map">
-				<Orphanages />
+			<Route path="/orphanages" exact>
+				<OrphanagesMap />
+			</Route>
+			<Route path="/orphanages/create">
+				<CreateOrphanages />
+			</Route>
+			<Route path="/orphanages/:id">
+				<Orphanage />
 			</Route>
 		</Switch>
 	)
